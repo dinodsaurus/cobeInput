@@ -2,6 +2,7 @@
   "name": "cobeinput",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "lesshat": "~3.0.2"
   }
 }

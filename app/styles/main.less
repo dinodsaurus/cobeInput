@@ -1,0 +1,123 @@
+@import "./bower_components/lesshat/build/lesshat.less";
+@positive:#44a51e;
+@negative:#ba1424;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family:verdana;
+}
+.input{
+  position:absolute;
+  width:1200px;
+  top:30%;
+  left:50%;
+  margin-left:-600px;
+  #metricText{
+    top:-5000px;
+    position:absolute;
+    display:inline;
+    font-size:120px;
+    line-height:150px;
+    text-align:center;
+    border:none;
+    color:black;
+  }
+  h2{
+    text-align:center;
+    font-weight:normal;
+    text-transform:uppercase;
+    .opacity(1);
+    .transition(opacity .3s);
+    &.active{
+      .opacity(0);
+    }
+  }
+  .field{
+    &.active{
+      #clearInput{
+        .opacity(1);
+      }
+      input{
+        padding:0 90px;
+      }
+    }
+    #clearInput{
+      position:absolute;
+      right:30px;
+      top:95px;
+      font-size:80px;
+      color:#666;
+      .opacity(0);
+      .transition(opacity .2s);
+      cursor:pointer;
+
+    }
+    input{
+      width:100%;
+      font-size:120px;
+      line-height:150px;
+      text-align:center;
+      background:#efefef;
+      border:none;
+      .transition(all .1s);
+    }
+  }
+  #small{
+    width:100%;
+    position:absolute;
+    text-align:center;
+    text-transform:uppercase;
+    color:@positive;
+    .opacity(0);
+    .transition(opacity .3s);
+    span{
+      color:black;
+    }
+    &.active{
+      .opacity(.7);
+    }
+  }
+  .buttons{
+    position:relative;
+    width: 670px;
+    margin: 100px auto 0 auto;
+    .button{
+      position:absolute;
+      display:block;
+      width: 320px;
+      padding:10px 0;
+      border:1px solid;
+      text-decoration:none;
+      text-align:center;
+      .border-radius(25px);
+      .opacity(.7);
+      .transition(all .3s);
+      &:hover{
+        .opacity(1);
+      }
+    }
+    .positive{
+      color:@positive;
+      border-color:@positive;
+      &.active{
+        .opacity(0);
+      }
+    }
+    .negative{
+      left:350px;
+      color:@negative;
+      border-color:@negative;
+      &.active{
+        left:50%;
+        margin-left:-160px;
+      }
+    }
+  }
+}
